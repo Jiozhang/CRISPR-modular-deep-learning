@@ -1,0 +1,12 @@
+
+# macOS / Jupyter
+.DS_Store
+**/.DS_Store
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# local large outputs (do not commit)
+Computational_struct_effect_validation/
+Feature_importance_analysis/
+Feature_score_logos/
+Transfer_learning/
