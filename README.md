@@ -9,6 +9,9 @@ conda create -n modcrispr python=3.12.4 -y
 conda activate modcrispr
 ```
 ## Step 3: Clone the modcrispr repository
+```bash
+git clone [https://github.com/Jiozhang/CRISPR-modular-deep-learning.git] /path/to/your/modcrispr
+```
 ## Step 4: Navigate to the project directory
 ```bash
 cd /path/to/your/modcrispr
@@ -17,4 +20,6 @@ cd /path/to/your/modcrispr
 ```bash
 pip install -r requirements.txt
 ```
+## Step 6: Access Jupyter Notebook
+Users can access Jupyter Notebook by navigating to port 8888 on the server
 
