@@ -10,3 +10,7 @@ Computational_struct_effect_validation/
 Feature_importance_analysis/
 Feature_score_logos/
 Transfer_learning/
+
+# Data & results
+Datasets_17-38/
+val_loss_Pearson_Spearman_violin_plot_summary/
