@@ -10,11 +10,11 @@ conda activate modcrispr
 ```
 ## Step 3: Clone the modcrispr repository
 ```bash
-git clone [https://github.com/Jiozhang/CRISPR-modular-deep-learning.git] /path/to/your/modcrispr
+git clone [https://github.com/Jiozhang/CRISPR-modular-deep-learning.git] /path/to/your/modcrispr_main
 ```
 ## Step 4: Navigate to the project directory
 ```bash
-cd /path/to/your/modcrispr
+cd /path/to/your/modcrispr_main
 ```
 ## Step 5: Install the project dependencies from requirements.txt
 ```bash
