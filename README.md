@@ -20,6 +20,11 @@ cd /path/to/your/modcrispr
 ```bash
 pip install -r requirements.txt
 ```
-## Step 6: Access Jupyter Notebook
-Users can access Jupyter Notebook by navigating to port 8888 on the server
-
+## Step 6: Install Jupyter (if not installed)
+```bash
+conda install notebook
+```
+## Step 7: Launch Jupyter Notebook
+```bash
+jupyter notebook
+```
