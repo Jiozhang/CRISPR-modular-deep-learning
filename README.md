@@ -28,3 +28,7 @@ conda install notebook
 ```bash
 jupyter notebook
 ```
+## To use a specific branch:
+```bash
+git switch branchname
+```
