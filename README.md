@@ -1,4 +1,4 @@
-The main branch stores the following items for each dataset:
+The main branch stores the following items for each tested dataset:
 1. `Raw input information files, such as guide sequences, target sequences and reaction outcome`
 2. `Feature calculation codes` 
 3. `Feature files`
