@@ -1,4 +1,14 @@
-The code and data used in the paper "Generalizable Modular Deep Learning for Universal CRISPR Reaction Prediction", specifically developing single-branch and modular deep learning for diverse CRISPR reactions and their performance evaluation 
+The main branch stores the following items for each dataset:
+1. `Raw input information files, such as guide sequences, target sequences and reaction outcome`
+2. `Feature calculation codes` 
+3. `Feature files`
+4. `TensorFlow training scripts`
+5. `TensorFlow models`
+6. `PyTorch training scripts`
+7. `PyTorch models`
+
+The models are trained using wither TensorFlow libraries or PyTorch libraries. The TensorFlow libraries are used for training the CNN1, CNN1+CNN2, and CNN1+CNN2+MLP frameworks. The PyTorch libraries are used primarily for training the full CNN1+CNN2+MLP+GNN framework. The TensorFlow model file extension is `.h5`, and the PyTorch model file extension is `.pt`.
+
 # Installation guide
 ## Step 1: Create a new virtual environment called modcrispr with Python 3.12.4
 ```bash
