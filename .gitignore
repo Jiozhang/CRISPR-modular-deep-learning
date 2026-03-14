@@ -9,7 +9,3 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# ML model checkpoints
-*.h5
-*.pt
-*.pthc
