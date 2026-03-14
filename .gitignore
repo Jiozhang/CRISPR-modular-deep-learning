@@ -1,5 +1,15 @@
+# macOS
 .DS_Store
 **/.DS_Store
-.ipynb_checkpoints/
+
+# Python
 __pycache__/
 *.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML model checkpoints
+*.h5
+*.pt
+*.pthc
