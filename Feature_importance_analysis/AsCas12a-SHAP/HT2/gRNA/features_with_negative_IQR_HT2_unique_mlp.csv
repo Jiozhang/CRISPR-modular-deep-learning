@@ -1,0 +1,4 @@
+Feature,Q1,Q3,Median Spearman Correlation
+bh_maximal consecutive unpaired bases,-0.983,-0.968,-0.977
+bh_5' overhang,-0.877,-0.846,-0.875
+central region,-0.92,-0.424,-0.699
