@@ -30,11 +30,16 @@ cd /path/to/your/modcrispr
 ```bash
 pip install -r requirements.txt
 ```
-## Step 6: Install Jupyter (if not installed)
+## Step 6: Download the most updated NUPACK package (currently Version 4.0.2.0) from https://www.nupack.org/, and unzip the folder in /Downloads
+## Step 7: Install the NUPACK package
+```bash
+python -m pip install -U nupack -f ~/Downloads/nupack-4.0.2.0/package
+```
+## Step 8: Install Jupyter (if not installed)
 ```bash
 conda install notebook
 ```
-## Step 7: Launch Jupyter Notebook
+## Step 9: Launch Jupyter Notebook
 ```bash
 jupyter notebook
 ```
