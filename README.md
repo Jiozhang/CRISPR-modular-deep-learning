@@ -10,3 +10,6 @@ The `.txt` files contain the underlying data associated with these figures.
 git switch Computational-struct-effect-validation
 ```
 ## then relaunch or refresh Jupyter Notebook
+```bash
+jupyter notebook
+```
