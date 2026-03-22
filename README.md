@@ -10,3 +10,6 @@ The "Expert model" folder contains the calculated features and the codes for zer
 git switch Transfer-learning
 ```
 ## then relaunch or refresh Jupyter Notebook
+```bash
+jupyter notebook
+```
