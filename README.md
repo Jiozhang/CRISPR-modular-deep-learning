@@ -25,7 +25,7 @@ git clone https://github.com/Jiozhang/CRISPR-modular-deep-learning.git ~/path/to
 ```
 ## Step 4: Navigate to the project directory
 ```bash
-cd /path/to/your/modcrispr
+cd ~/path/to/your/modcrispr
 ```
 ## Step 5: Install the project dependencies from requirements.txt
 ```bash
