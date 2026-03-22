@@ -62,3 +62,6 @@ then in the terminal, type:
 git switch branchname
 ```
 ## then relaunch or refresh Jupyter Notebook
+```bash
+jupyter notebook
+```
