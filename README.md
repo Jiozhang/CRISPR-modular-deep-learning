@@ -10,6 +10,9 @@ The figures in the article related to SHAP analysis and the codes used to genera
 git switch Feature-importance-analysis
 ```
 ## then relaunch or refresh Jupyter Notebook
+```bash
+jupyter notebook
+```
 
 # Reference
 Lundberg, S. M. & Lee, S.-I. A unified approach to interpreting model predictions. Advances in neural information processing systems **30** (2017). 
