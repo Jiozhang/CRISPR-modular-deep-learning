@@ -9,7 +9,7 @@ The main branch stores the following items for each tested dataset:
 
 The models are trained using either TensorFlow libraries or PyTorch libraries. The TensorFlow libraries are used for training the `CNN1`, `CNN1+CNN2`, and `CNN1+CNN2+MLP` frameworks. The PyTorch libraries are used primarily for training the full `CNN1+CNN2+MLP+GNN` framework. The TensorFlow model file extension is `.h5`, and the PyTorch model file extension is `.pt`.
 
-# Installation guide
+# Installation guide (with Anaconda)
 ## Step 0: Install Anaconda Navigator (https://www.anaconda.com/download)
 ## Step 1: Create a new virtual environment called modcrispr with Python 3.12.4
 ```bash
