@@ -44,7 +44,20 @@ conda install notebook
 ```bash
 jupyter notebook
 ```
-## To use a specific branch:
+## To use a specific branch, first shutdown the current notebook server and get your prompt back:
+press:
+```bash
+Control + C
+```
+then when it asks something like: 
+```
+Shutdown this notebook server (y/[n])?
+```
+type:
+```bash
+y
+```
+then in the terminal, type:
 ```bash
 git switch branchname
 ```
