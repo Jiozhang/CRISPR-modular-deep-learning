@@ -8,3 +8,6 @@ The `.ipynb` files include the corresponding figures in the article and the code
 git switch Performance-summary
 ```
 ## then relaunch or refresh Jupyter Notebook
+```bash
+jupyter notebook
+```
