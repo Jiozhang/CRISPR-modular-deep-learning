@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular CRISPR Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <h1>Modular CRISPR Predictor</h1>
+            <p class="subtitle">
+                Choose either an individually trained model or a fine-tuned model, then select the reaction and enter the required sequences.
+            </p>
+
+            <form action="/select-model-group" method="post" class="section-form">
+                <label for="model_group">Model family</label>
+                <select name="model_group" class="reaction-select" onchange="this.form.submit()">
+                    <option value="individual" {% if model_group == "individual" %}selected{% endif %}>
+                        Individually trained models
+                    </option>
+                    <option value="fine_tuned" {% if model_group == "fine_tuned" %}selected{% endif %}>
+                        Fine-tuned models
+                    </option>
+                </select>
+
+                {% if model_group == "fine_tuned" %}
+                    <label for="fine_tuned_category">Fine-tuned category</label>
+                    <select name="fine_tuned_category" class="reaction-select">
+                        {% for cat in fine_tuned_categories %}
+                            <option value="{{ cat }}"
+                                {% if selected_fine_tuned_category == cat %}selected{% endif %}>
+                                {{ cat }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="small-btn">Load category</button>
+                {% endif %}
+            </form>
+
+            {% if model_group == "fine_tuned" %}
+                <form action="/select-fine-tuned-category" method="post" class="section-form">
+                    <input type="hidden" name="model_group" value="{{ model_group }}">
+                    <label for="fine_tuned_category">Category</label>
+                    <select name="fine_tuned_category" class="reaction-select" onchange="this.form.submit()">
+                        {% for cat in fine_tuned_categories %}
+                            <option value="{{ cat }}"
+                                {% if selected_fine_tuned_category == cat %}selected{% endif %}>
+                                {{ cat }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            {% endif %}
+
+            <form action="/select-reaction" method="post" class="section-form">
+                <input type="hidden" name="model_group" value="{{ model_group }}">
+                {% if selected_fine_tuned_category %}
+                    <input type="hidden" name="fine_tuned_category" value="{{ selected_fine_tuned_category }}">
+                {% endif %}
+
+                <label for="reaction_key">Reaction</label>
+                <select name="reaction_key" class="reaction-select" size="8" onchange="this.form.submit()">
+                    {% for item in reaction_options %}
+                        <option value="{{ item.key }}"
+                            {% if selected_reaction_key == item.key %}selected{% endif %}>
+                            {{ item.label }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+
+            <form action="/predict-form" method="post" class="predict-form">
+                <input type="hidden" name="model_group" value="{{ model_group }}">
+                <input type="hidden" name="reaction_key" value="{{ selected_reaction_key }}">
+                {% if selected_fine_tuned_category %}
+                    <input type="hidden" name="fine_tuned_category" value="{{ selected_fine_tuned_category }}">
+                {% endif %}
+
+                {% for field in input_fields %}
+                    <label for="{{ field.name }}">{{ field.label }}</label>
+                    {% if field.instruction %}
+                        <div class="input-instruction">{{ field.instruction }}</div>
+                    {% endif %}
+                    <textarea
+                        name="{{ field.name }}"
+                        rows="4"
+                        placeholder="{{ field.placeholder }}"
+                        required
+                    >{{ (form_values[field.name] if form_values and field.name in form_values else "") }}</textarea>
+                {% endfor %}
+
+                <button type="submit">Predict</button>
+            </form>
+
+            {% if ratio %}
+                <div class="result-box">
+                    <h2>Prediction Result</h2>
+                    <p><strong>Predicted value:</strong> {{ ratio }}</p>
+                    <p><strong>Percent:</strong> {{ percent }}%</p>
+                </div>
+            {% endif %}
+
+            {% if error %}
+                <div class="error-box">
+                    <h2>Error</h2>
+                    <p>{{ error }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
