@@ -80,7 +80,7 @@ We have also designed a user interface (UI) which enables direct sample-to-answe
 ## Then click on "Predict", the predicted activity will appear below:
 <img width="2020" height="400" alt="image" src="https://github.com/user-attachments/assets/69d517e7-1064-42c1-8668-90b2d3171ff4" />
 
-
+## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
 
 
 
