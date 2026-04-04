@@ -67,13 +67,17 @@ jupyter notebook
 ```
 # Web UI version 
 We have also designed a user interface (UI) which enables direct sample-to-answer prediction of a diverse range of CRISPR reactions. The users are able to select a reaction from individually trained models or fine-tuned models. 
+
 ## Individually trained models:
 <img width="2044" height="886" alt="image" src="https://github.com/user-attachments/assets/dbe0b6cf-d142-4c8b-86f7-0746540bc7ac" />
+
 ## Fine-tuned models:
 <img width="2036" height="1066" alt="image" src="https://github.com/user-attachments/assets/3f60f4ab-4acb-4b6c-a7b0-d670c362a3c0" />
-and simply input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
+
+## Simply input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
 <img width="2020" height="846" alt="image" src="https://github.com/user-attachments/assets/6d3587c3-df0d-4427-8013-5472f6acfc70" />
-Then click on "Predict", the predicted activity will appear below:
+
+## Then click on "Predict", the predicted activity will appear below:
 <img width="2020" height="400" alt="image" src="https://github.com/user-attachments/assets/69d517e7-1064-42c1-8668-90b2d3171ff4" />
 
 
