@@ -12,4 +12,11 @@ REACTION_META = {
          "instruction": "Please input a 20-nt sequence in DNA"},
     ],
     "prediction_mode": "standard_4graph",
+    "output_label": "Relative activity",
+    "output_transform": {
+        "type": "minmax",
+        "min": -5.38,
+        "max": 3.91,
+        "clip_0_1": True
+    }
 }

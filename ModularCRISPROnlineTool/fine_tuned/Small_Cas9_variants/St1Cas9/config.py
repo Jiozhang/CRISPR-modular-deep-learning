@@ -12,4 +12,8 @@ REACTION_META = {
          "instruction": "Please input a 19-nt sequence in DNA"},
     ],
     "prediction_mode": "reduced_3graph",
+    "output_label": "Relative activity",
+    "output_transform": {
+        "type": "identity"
+    }
 }

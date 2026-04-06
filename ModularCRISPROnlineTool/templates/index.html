@@ -94,11 +94,10 @@
                 <button type="submit">Predict</button>
             </form>
 
-            {% if ratio %}
+            {% if relative_activity %}
                 <div class="result-box">
                     <h2>Prediction Result</h2>
-                    <p><strong>Predicted value:</strong> {{ ratio }}</p>
-                    <p><strong>Percent:</strong> {{ percent }}%</p>
+                    <p><strong>{{ output_label or "Relative activity" }}:</strong> {{ relative_activity }}</p>
                 </div>
             {% endif %}
 

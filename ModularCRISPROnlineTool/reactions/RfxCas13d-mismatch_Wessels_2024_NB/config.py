@@ -12,4 +12,11 @@ REACTION_META = {
          "instruction": "Please input a 23-nt sequence in RNA"},
     ],
     "prediction_mode": "cas13d_3graph",
+    "output_label": "Relative activity",
+    "output_transform": {
+        "type": "minmax",
+        "min": -5.01,
+        "max": -0.86,
+        "clip_0_1": True
+    }
 }

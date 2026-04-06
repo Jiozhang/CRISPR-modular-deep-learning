@@ -76,6 +76,7 @@ def get_segments_interrupted_by_plus(input_string: str) -> list:
     return segments
 
 def build_structure_features(guide, target):
+    
     struct_array_unit = []
 
     guide = scaffold + guide

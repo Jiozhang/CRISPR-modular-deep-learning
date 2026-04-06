@@ -9,7 +9,11 @@ REACTION_META = {
         {"name": "target", 
          "label": "Target", 
          "placeholder": "Enter target sequence",
-         "instruction": "Please input a 30-nt sequence in DNA, in the form of 6-nt prefix + 20-nt target + 4-nt suffix"},
+         "instruction": "Please input a 30-nt sequence in DNA, in the form of 4-nt prefix + 20-nt target + 6-nt suffix"},
     ],
     "prediction_mode": "standard_4graph",
+    "output_label": "Editing efficiency",
+    "output_transform": {
+        "type": "identity"
+    }
 }

@@ -540,12 +540,26 @@ def run_prediction(model_group, model, features, meta, form_inputs):
     else:
         raise ValueError(f"Unknown model_group: {model_group}")
     
+def DNA_reverse_complement(DNA):
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    return ''.join(complement.get(base, base) for base in reversed(DNA))
+
+def RNA_reverse_complement(RNA):
+    complement = {'A': 'U', 'C': 'G', 'G': 'C', 'U': 'A'}
+    return ''.join(complement.get(base, base) for base in reversed(RNA))
+
+def DNA_to_RNA(DNA):
+    match = {'A': 'A', 'C': 'C', 'G': 'G', 'T': 'U'}
+    return ''.join(match.get(base, base) for base in (DNA))
+    
 def run_individual_prediction(model, features, meta, form_inputs):
     prediction_mode = meta["prediction_mode"]
 
     if prediction_mode == "standard_4graph":
         guide = features.clean_seq(form_inputs["guide"])
         target = features.clean_seq(form_inputs["target"])
+
+        target = DNA_reverse_complement(target)
 
         features.validate_seq(guide, "guide")
         features.validate_seq(target, "target")
@@ -573,6 +587,8 @@ def run_individual_prediction(model, features, meta, form_inputs):
         guide = features.clean_seq(form_inputs["guide"])
         target = features.clean_seq(form_inputs["target"])
 
+        target = DNA_reverse_complement(target)
+
         features.validate_seq(guide, "guide")
         features.validate_seq(target, "target")
 
@@ -597,6 +613,10 @@ def run_individual_prediction(model, features, meta, form_inputs):
         guide = features.clean_seq(form_inputs["guide"])
         target = features.clean_seq(form_inputs["target"])
         template = features.clean_seq(form_inputs["template"])
+
+        target = DNA_reverse_complement(target)
+        template = DNA_to_RNA(template)
+        template = RNA_reverse_complement(template)
 
         features.validate_seq(guide, "guide")
         features.validate_seq(target, "target")
@@ -645,6 +665,8 @@ def run_fine_tuned_prediction(model, features, meta, form_inputs):
         guide = features.clean_seq(form_inputs["guide"])
         target = features.clean_seq(form_inputs["target"])
 
+        target = DNA_reverse_complement(target)
+
         features.validate_seq(guide, "guide")
         features.validate_seq(target, "target")
 
@@ -667,6 +689,30 @@ def run_fine_tuned_prediction(model, features, meta, form_inputs):
 
     else:
         raise ValueError(f"Unsupported fine-tuned prediction_mode: {prediction_mode}")
+    
+def transform_output_value(raw_value: float, meta: dict) -> float:
+    transform = meta.get("output_transform", {"type": "identity"})
+    t = transform.get("type", "identity")
+
+    if t == "identity":
+        value = raw_value
+    elif t == "divide":
+        value = raw_value / float(transform["value"])
+    elif t == "multiply":
+        value = raw_value * float(transform["value"])
+    elif t == "minmax":
+        min_val = float(transform["min"])
+        max_val = float(transform["max"])
+        if max_val == min_val:
+            raise ValueError("Invalid minmax transform: max == min")
+        value = (raw_value - min_val) / (max_val - min_val)
+    else:
+        raise ValueError(f"Unsupported output_transform type: {t}")
+
+    if transform.get("clip_0_1", False):
+        value = max(0.0, min(1.0, value))
+
+    return float(value)
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
@@ -805,7 +851,9 @@ async def predict_form(request: Request):
             resources["meta"],
             form_dict,
         )
-
+        display_value = transform_output_value(value, resources["meta"])
+        output_label = resources["meta"].get("output_label", "Relative activity")
+ 
         return templates.TemplateResponse(
             "index.html",
             {
@@ -817,8 +865,8 @@ async def predict_form(request: Request):
                 "selected_fine_tuned_category": fine_tuned_category,
                 "input_fields": resources["meta"]["input_fields"],
                 "form_values": form_dict,
-                "ratio": f"{value:.6f}",
-                "percent": f"{value * 100:.2f}",
+                "relative_activity": f"{display_value:.6f}",
+                "output_label": output_label, 
             },
         )
     except Exception as e:

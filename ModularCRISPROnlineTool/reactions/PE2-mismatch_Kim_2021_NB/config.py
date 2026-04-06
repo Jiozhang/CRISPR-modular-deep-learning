@@ -9,11 +9,15 @@ REACTION_META = {
         {"name": "target", 
          "label": "Target", 
          "placeholder": "Enter target sequence",
-         "instruction": "Please input a 47-nt sequence in DNA, in the form of 23-nt prefix + 20-nt target + 4-nt suffix"},
+         "instruction": "Please input a 47-nt sequence in DNA, in the form of 4-nt prefix + 20-nt target + 23-nt suffix"},
         {"name": "template", 
          "label": "Template", 
          "placeholder": "Enter template sequence",
-         "instruction": "Please input a maximum 37-nt sequence in RNA"},
+         "instruction": "Please input a maximum 37-nt sequence in DNA"},
     ],
     "prediction_mode": "pe2_6graph",
+    "output_label": "Editing efficiency",
+    "output_transform": {
+        "type": "identity"
+    }
 }
