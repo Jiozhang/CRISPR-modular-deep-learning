@@ -76,6 +76,7 @@ We have also designed a user interface (UI) which enables direct sample-to-answe
 
 ## Input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
 Note that both guide and target sequences (and template sequence if predicting prime editing reactions) should correspond to these of the protospacer strand.
+
 <img width="2000" height="712" alt="image" src="https://github.com/user-attachments/assets/17c26cef-6edd-422a-89e1-3e06fc61deaf" />
 
 ## Then click on "Predict", the predicted activity will appear below:
