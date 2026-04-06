@@ -74,8 +74,8 @@ We have also designed a user interface (UI) which enables direct sample-to-answe
 ## Fine-tuned models:
 <img width="2036" height="1066" alt="image" src="https://github.com/user-attachments/assets/3f60f4ab-4acb-4b6c-a7b0-d670c362a3c0" />
 
-## Simply input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box, note that both guide and target sequences should correspond to protospacer:
-<img width="2020" height="846" alt="image" src="https://github.com/user-attachments/assets/6d3587c3-df0d-4427-8013-5472f6acfc70" />
+## Simply input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box. Note that both guide and target sequences should correspond to protospacer:
+<img width="2000" height="712" alt="image" src="https://github.com/user-attachments/assets/17c26cef-6edd-422a-89e1-3e06fc61deaf" />
 
 ## Then click on "Predict", the predicted activity will appear below:
 <img width="2010" height="344" alt="image" src="https://github.com/user-attachments/assets/da80f13e-010f-4a3d-a7e2-901563fbd89d" />
