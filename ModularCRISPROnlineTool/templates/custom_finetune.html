@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular CRISPR Predictor - Custom Fine-tuning</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="card">
+            <div class="top-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/predict" class="nav-link">Predefined prediction</a>
+                <a href="/custom-finetune" class="nav-link active">Custom fine-tuning</a>
+            </div>
+
+            <h1>Modular CRISPR Predictor</h1>
+            <p class="subtitle">
+                Upload your own Excel dataset to fine-tune from the generalist model.
+                The Excel file must contain 3 columns:
+                guide sequence, target sequence, and activity value.
+            </p>
+
+            <div class="section-title">Custom fine-tuning from your own dataset</div>
+
+            <form action="/fine-tune-custom" method="post" enctype="multipart/form-data"
+                class="predict-form"
+                onsubmit="showTrainingMessage()">
+
+                <label for="custom_mode">Reaction mode</label>
+                <select name="custom_mode" class="reaction-select" required>
+                    <option value="Cas9" {% if custom_mode == "Cas9" %}selected{% endif %}>Cas9</option>
+                    <option value="Cas12" {% if custom_mode == "Cas12" %}selected{% endif %}>Cas12</option>
+                    <option value="Cas13" {% if custom_mode == "Cas13" %}selected{% endif %}>Cas13</option>
+                </select>
+
+                <label for="custom_reaction_name">New reaction name</label>
+                <input
+                    type="text"
+                    name="custom_reaction_name"
+                    class="text-input"
+                    value="{{ custom_reaction_name or '' }}"
+                    placeholder="e.g. LwaCas13a"
+                    required
+                >
+
+                <label for="custom_scaffold_seq">gRNA scaffold sequence</label>
+                <textarea
+                    name="custom_scaffold_seq"
+                    rows="4"
+                    placeholder="Enter the scaffold sequence"
+                    required
+                >{{ custom_scaffold_seq or '' }}</textarea>
+
+                <label for="custom_spacer_len">Spacer length</label>
+                <input
+                    type="number"
+                    name="custom_spacer_len"
+                    class="text-input"
+                    min="1"
+                    max="30"
+                    value="{{ custom_spacer_len or '' }}"
+                    placeholder="e.g. 20"
+                    required
+                >
+
+                <label for="custom_repeat_k">Repeat_k</label>
+                <select name="custom_repeat_k" class="reaction-select" required>
+                    <option value="1" {% if custom_repeat_k|string == "1" %}selected{% endif %}>1</option>
+                    <option value="10" {% if custom_repeat_k|string == "10" %}selected{% endif %}>10</option>
+                    <option value="100" {% if custom_repeat_k|string == "100" %}selected{% endif %}>100</option>
+                </select>
+                <div class="input-instruction">
+                    Suggested repeat_k: use 1 if sample size is over 1,000; use 10 if sample size is between 100 and 1,000; use 100 if sample size is below 100.
+                </div>
+
+                <label for="custom_n_trials">Number of trials</label>
+                <input
+                    type="number"
+                    name="custom_n_trials"
+                    class="text-input"
+                    min="1"
+                    max="200"
+                    value="{{ custom_n_trials or 20 }}"
+                    placeholder="e.g. 20"
+                    required
+                >
+                <div class="input-instruction">
+                    Suggested: use a smaller value for faster tuning. For example, 10–20 for quick runs.
+                </div>
+
+                <div class="label-row">
+                    <label for="custom_dataset_file">Training dataset (.xlsx)</label>
+                    <a href="/download-dataset-template" class="download-link">
+                        Download template
+                    </a>
+                </div>
+
+                <input
+                    type="file"
+                    name="custom_dataset_file"
+                    class="file-input"
+                    accept=".xlsx"
+                    required
+                >
+
+                <div class="input-instruction">
+                    Use the downloadable template to ensure the correct column order: guide, target, activity.
+                </div>
+
+                <div class="input-instruction">
+                    Column 1 = guide sequence (max 30 nt), Column 2 = target sequence (max 30 nt), Column 3 = activity value (0 to 1).
+                </div>
+
+                <div id="trainingMessage" class="training-box" style="display:none;">
+                    Training in progress......
+                </div>
+
+                <div class="button-row">
+                    <button type="button" class="secondary-btn" onclick="window.location.href='/custom-finetune'">
+                        Start over
+                    </button>
+                    <button type="submit">Fine-tune custom model</button>
+                </div>
+            </form>
+
+            {% if custom_ft_success %}
+                <div class="result-box">
+                    <h2>Custom fine-tuning completed</h2>
+                    {% if custom_reaction_name %}
+                        <p><strong>Reaction name:</strong> {{ custom_reaction_name }}</p>
+                    {% endif %}
+                    {% if custom_mode %}
+                        <p><strong>Mode:</strong> {{ custom_mode }}</p>
+                    {% endif %}
+                    {% if custom_scaffold_seq %}
+                        <p><strong>Scaffold sequence:</strong> {{ custom_scaffold_seq }}</p>
+                    {% endif %}
+                    {% if custom_spacer_len %}
+                        <p><strong>Spacer length:</strong> {{ custom_spacer_len }}</p>
+                    {% endif %}
+                    {% if custom_repeat_k %}
+                        <p><strong>Repeat_k:</strong> {{ custom_repeat_k }}</p>
+                    {% endif %}
+                    {% if custom_n_trials %}
+                        <p><strong>Number of trials:</strong> {{ custom_n_trials }}</p>
+                    {% endif %}
+                    {% if custom_val_mse %}
+                        <p><strong>Validation MSE:</strong> {{ custom_val_mse }}</p>
+                    {% endif %}
+                    {% if custom_unseen_mse %}
+                        <p><strong>Unseen-data MSE:</strong> {{ custom_unseen_mse }}</p>
+                    {% endif %}
+                    {% if custom_n_train %}
+                        <p><strong>Training samples:</strong> {{ custom_n_train }}</p>
+                    {% endif %}
+                    {% if custom_n_val %}
+                        <p><strong>Validation samples:</strong> {{ custom_n_val }}</p>
+                    {% endif %}
+                    {% if custom_n_unseen %}
+                        <p><strong>Unseen samples:</strong> {{ custom_n_unseen }}</p>
+                    {% endif %}
+                    {% if download_model_url %}
+                        <p><a href="{{ download_model_url }}" class="download-link">Download fine_tuned_model.pt</a></p>
+                    {% endif %}
+                </div>
+
+                {% if custom_model_path %}
+                    <form action="/predict-custom-model" method="post" class="predict-form">
+                        <input type="hidden" name="custom_model_path" value="{{ custom_model_path }}">
+                        <input type="hidden" name="custom_mode" value="{{ custom_mode }}">
+                        <input type="hidden" name="custom_scaffold_seq" value="{{ custom_scaffold_seq }}">
+                        <input type="hidden" name="custom_spacer_len" value="{{ custom_spacer_len }}">
+
+                        <label for="custom_guide">Guide</label>
+                        <textarea
+                            name="custom_guide"
+                            rows="3"
+                            placeholder="Enter a guide sequence"
+                            required
+                        >{{ custom_guide or '' }}</textarea>
+
+                        <label for="custom_target">Target</label>
+                        <textarea
+                            name="custom_target"
+                            rows="3"
+                            placeholder="Enter a target sequence"
+                            required
+                        >{{ custom_target or '' }}</textarea>
+
+                        <button type="submit">Predict with custom fine-tuned model</button>
+                    </form>
+                {% endif %}
+
+                {% if custom_prediction %}
+                    <div class="result-box">
+                        <h2>Custom model prediction</h2>
+                        <p><strong>{{ custom_output_label or "Relative activity" }}:</strong> {{ custom_prediction }}</p>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {% if custom_ft_error %}
+                <div class="error-box">
+                    <h2>Custom fine-tuning error</h2>
+                    <p>{{ custom_ft_error }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+    function showTrainingMessage() {
+        const box = document.getElementById("trainingMessage");
+        if (box) {
+            box.style.display = "block";
+            box.textContent = "Training in progress......";
+        }
+    }
+    </script>
+</body>
+</html>
