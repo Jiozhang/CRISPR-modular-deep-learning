@@ -1,8 +1,0 @@
-{
-  "reaction_name": "Test-LbCas12a",
-  "mode": "Cas12",
-  "scaffold_seq": "UAAUUUCUACUAAGUGUAGAU",
-  "spacer_len": 21,
-  "n_samples": 199,
-  "model_path": "user_models/Test-LbCas12a_5c9a2941/fine_tuned_model.pt"
-}
