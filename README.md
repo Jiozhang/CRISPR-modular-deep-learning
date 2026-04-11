@@ -74,6 +74,7 @@ We have also developed a user-friendly interface (UI) that enables direct, sampl
 
 ## Predefined model prediction
 The users can select between "Individually trained models" and "Fine-tuned models"
+
 <img width="2002" height="212" alt="image" src="https://github.com/user-attachments/assets/18433c15-b986-473f-98ad-fc0e1142e8c1" />
 
 ### Individually trained models:
