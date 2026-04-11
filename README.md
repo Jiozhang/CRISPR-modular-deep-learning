@@ -96,6 +96,19 @@ If the spacer is located upstream of the scaffold in the guide sequence (from 5â
 
 <img width="2000" height="272" alt="image" src="https://github.com/user-attachments/assets/42b58a8c-cf8d-4237-b87a-767aa28412d8" />
 
+### Provide a reaction name
+<img width="1984" height="172" alt="image" src="https://github.com/user-attachments/assets/625d78e0-4fd4-444e-a78b-db381f2c5804" />
+
+### Provide guide scaffold sequence and spacer length (maximum 30 nt)
+<img width="2002" height="470" alt="image" src="https://github.com/user-attachments/assets/13205149-9be3-4479-bf45-a48c3d3f252e" />
+
+### Select the number of times your provided dataset will be repeated to expand its size (options: 1, 10, or 100)
+If your dataset is moderately large, it is not necessary to expand it during training, and you can set the repeat_k value to 1. For relatively smaller datasets (e.g., 100â€“1000 samples), a repeat_k value of 10 is recommended. For very small datasets (e.g., fewer than 100 samples), it is advised to use a repeat_k value of 100.
+<img width="1994" height="246" alt="image" src="https://github.com/user-attachments/assets/96b5bf49-1534-405a-94db-58ab108d6c8a" />
+
+
+
+
 
 
 ## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
