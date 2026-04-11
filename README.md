@@ -88,8 +88,14 @@ Note that both guide and target sequences (and template sequence if predicting p
 <img width="1996" height="700" alt="image" src="https://github.com/user-attachments/assets/026a2a3e-e973-4ab0-bb46-ec29c8c41dcf" />
 
 ### Then click on "Predict", the predicted activity will appear below:
-
 <img width="1992" height="266" alt="image" src="https://github.com/user-attachments/assets/b0024d8a-d0ef-403d-a1bf-173ed0cf92bf" />
+
+## Custom fine-tuning
+### Select reaction mode from "Cas9", "Cas12" and "Cas13"
+If the spacer is located upstream of the scaffold in the guide sequence (from 5′ to 3′), it is classified as the “Cas9” category. Otherwise, if the spacer is downstream of the scaffold, the system is classified as “Cas12” when the target is DNA, or “Cas13” when the target is RNA.
+
+<img width="2000" height="272" alt="image" src="https://github.com/user-attachments/assets/42b58a8c-cf8d-4237-b87a-767aa28412d8" />
+
 
 
 ## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
