@@ -112,6 +112,10 @@ For improved model accuracy, it is recommended to use a larger number of trials 
 
 <img width="1986" height="234" alt="image" src="https://github.com/user-attachments/assets/aed745b6-8cf6-438c-be07-bc647c46214d" />
 
+### Download the Excel template and upload your dataset
+It should be noted that the first, second, and third columns must strictly correspond to the guide sequences, target sequences, and activity values, respectively. Both the guide and target sequences should represent the protospacer strand, with a maximum length of 30 nt. The activity values must be preprocessed (as defined by the user) to fall within the range of 0 to 1.
+
+<img width="1994" height="332" alt="image" src="https://github.com/user-attachments/assets/f7be3c16-9633-4b4d-96f3-3a35e7ef0dda" />
 
 
 
