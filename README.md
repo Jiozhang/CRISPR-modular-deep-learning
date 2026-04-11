@@ -73,22 +73,24 @@ We have also developed a user-friendly interface (UI) that enables direct, sampl
 <img width="1876" height="644" alt="image" src="https://github.com/user-attachments/assets/cab4d7e9-313b-4c88-acaf-afd9386ce66f" />
 
 ## Predefined model prediction
+The users can select between "Individually trained models" and "Fine-tuned models"
+<img width="2002" height="212" alt="image" src="https://github.com/user-attachments/assets/18433c15-b986-473f-98ad-fc0e1142e8c1" />
 
+### Individually trained models:
+<img width="1992" height="660" alt="image" src="https://github.com/user-attachments/assets/868ad57c-c0a2-45b9-bb45-866ce13ab511" />
 
+### Fine-tuned models:
+<img width="2002" height="1074" alt="image" src="https://github.com/user-attachments/assets/423f79ba-02f7-4aa9-a654-8d2891d72942" />
 
-## Individually trained models:
-<img width="2044" height="886" alt="image" src="https://github.com/user-attachments/assets/dbe0b6cf-d142-4c8b-86f7-0746540bc7ac" />
-
-## Fine-tuned models:
-<img width="2036" height="1066" alt="image" src="https://github.com/user-attachments/assets/3f60f4ab-4acb-4b6c-a7b0-d670c362a3c0" />
-
-## Input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
+### Input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
 Note that both guide and target sequences (and template sequence if predicting prime editing reactions) should correspond to these of the protospacer strand.
 
-<img width="2000" height="712" alt="image" src="https://github.com/user-attachments/assets/17c26cef-6edd-422a-89e1-3e06fc61deaf" />
+<img width="1996" height="700" alt="image" src="https://github.com/user-attachments/assets/026a2a3e-e973-4ab0-bb46-ec29c8c41dcf" />
 
 ## Then click on "Predict", the predicted activity will appear below:
-<img width="2010" height="344" alt="image" src="https://github.com/user-attachments/assets/da80f13e-010f-4a3d-a7e2-901563fbd89d" />
+
+<img width="1992" height="266" alt="image" src="https://github.com/user-attachments/assets/b0024d8a-d0ef-403d-a1bf-173ed0cf92bf" />
+
 
 ## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
 
