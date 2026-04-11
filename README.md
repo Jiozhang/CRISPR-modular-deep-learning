@@ -87,7 +87,7 @@ Note that both guide and target sequences (and template sequence if predicting p
 
 <img width="1996" height="700" alt="image" src="https://github.com/user-attachments/assets/026a2a3e-e973-4ab0-bb46-ec29c8c41dcf" />
 
-### Then click on "Predict", the predicted activity will appear below:
+### Click on "Predict", the predicted activity will appear below:
 <img width="1992" height="266" alt="image" src="https://github.com/user-attachments/assets/b0024d8a-d0ef-403d-a1bf-173ed0cf92bf" />
 
 ## Custom fine-tuning
@@ -117,7 +117,10 @@ It should be noted that the first, second, and third columns must strictly corre
 
 <img width="1994" height="332" alt="image" src="https://github.com/user-attachments/assets/f7be3c16-9633-4b4d-96f3-3a35e7ef0dda" />
 
+### Click on "Fine-tune custom model", it will show "Training in progress......":
+<img width="1992" height="146" alt="image" src="https://github.com/user-attachments/assets/857ab179-8625-4179-b1ce-27e563eaf8db" />
 
+###
 
 
 
