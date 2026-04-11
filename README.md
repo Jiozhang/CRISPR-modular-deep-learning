@@ -104,7 +104,14 @@ If the spacer is located upstream of the scaffold in the guide sequence (from 5â
 
 ### Select the number of times your provided dataset will be repeated to expand its size (options: 1, 10, or 100)
 If your dataset is moderately large, it is not necessary to expand it during training, and you can set the repeat_k value to 1. For relatively smaller datasets (e.g., 100â€“1000 samples), a repeat_k value of 10 is recommended. For very small datasets (e.g., fewer than 100 samples), it is advised to use a repeat_k value of 100.
+
 <img width="1994" height="246" alt="image" src="https://github.com/user-attachments/assets/96b5bf49-1534-405a-94db-58ab108d6c8a" />
+
+### Enter the number of trials you wish to train the model
+For improved model accuracy, it is recommended to use a larger number of trials (e.g., more than 100). However, 10-20 trials may still produce a moderately accurate model within a shorter training time.  
+
+<img width="1986" height="234" alt="image" src="https://github.com/user-attachments/assets/aed745b6-8cf6-438c-be07-bc647c46214d" />
+
 
 
 
