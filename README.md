@@ -77,18 +77,18 @@ The users can select between "Individually trained models" and "Fine-tuned model
 
 <img width="2002" height="212" alt="image" src="https://github.com/user-attachments/assets/18433c15-b986-473f-98ad-fc0e1142e8c1" />
 
-### Individually trained models:
+### Individually trained models
 <img width="1992" height="660" alt="image" src="https://github.com/user-attachments/assets/868ad57c-c0a2-45b9-bb45-866ce13ab511" />
 
-### Fine-tuned models:
+### Fine-tuned models
 <img width="2002" height="1074" alt="image" src="https://github.com/user-attachments/assets/423f79ba-02f7-4aa9-a654-8d2891d72942" />
 
-### Input guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box:
+### Enter guide sequence (in RNA) and target sequence (in DNA), follow the instructions above the input box
 Note that both guide and target sequences (and template sequence if predicting prime editing reactions) should correspond to these of the protospacer strand.
 
 <img width="1996" height="700" alt="image" src="https://github.com/user-attachments/assets/026a2a3e-e973-4ab0-bb46-ec29c8c41dcf" />
 
-### Click on "Predict", the predicted activity will appear below:
+### Click on "Predict", the predicted activity will appear below
 <img width="1992" height="266" alt="image" src="https://github.com/user-attachments/assets/b0024d8a-d0ef-403d-a1bf-173ed0cf92bf" />
 
 ## Custom fine-tuning
@@ -118,13 +118,21 @@ It should be noted that the first, second, and third columns must strictly corre
 
 <img width="1994" height="332" alt="image" src="https://github.com/user-attachments/assets/f7be3c16-9633-4b4d-96f3-3a35e7ef0dda" />
 
-### Click on "Fine-tune custom model", it will show "Training in progress......", and the progress can be monitored in the terminal:
+### Click on "Fine-tune custom model", it will show "Training in progress......", and the progress can be monitored in the terminal
 <img width="1992" height="146" alt="image" src="https://github.com/user-attachments/assets/857ab179-8625-4179-b1ce-27e563eaf8db" />
 
-### 
+### After training is complete, the webpage will display a result summary
+The MSE on both validation data and unseen data will be included. The fine-tuned model is also available for download from the result summary box.
 
+<img width="1990" height="1012" alt="image" src="https://github.com/user-attachments/assets/595c314d-a741-4d06-a2da-de9ccbd3a2ed" />
 
+### To predict the activity of a new guide/target pair using the fine-tuned model, enter the guide sequence (RNA) and target sequence (DNA)
+Make sure the lengths of input guide and target sequences are consistent with those in the provided dataset.
 
+<img width="1994" height="624" alt="image" src="https://github.com/user-attachments/assets/15139f36-dc51-4fc1-a905-8a32fd2b1986" />
+
+### Click on "Predict with custom fine-tuned model", the predicted activity will appear below
+<img width="1996" height="260" alt="image" src="https://github.com/user-attachments/assets/040bfdef-cb85-4d1c-86f6-a975d3dc0681" />
 
 ## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
 
