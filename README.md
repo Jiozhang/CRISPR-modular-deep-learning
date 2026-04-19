@@ -26,6 +26,6 @@ python -m pip install -U nupack -f ~/Downloads/nupack-4.0.2.0/package
 ```
 ## 8. Run the app
 ```bash
-modcrisprUI/bin/python -m uvicorn fastapi_app:app --reload
+~/path/to/your/modcrisprUI/bin/python -m uvicorn fastapi_app:app --reload
 ```
 ## 9. Go to http://127.0.0.1:8000 or any suggested address on your web browser and you should be ready to use the online version of this app
