@@ -3,21 +3,16 @@ This branch stores the user-friendly webpage version of individually trained mod
 # Installation guide
 
 ## 1. Open the ModularCRISPROnlineTool folder in Visual Studio Code 
-## 2. Inside the ModularCRISPROnlineTool folder, install Python 3.12.4
+## 2: Create a new virtual environment called modcrisprUI with Python 3.12.4
 ```bash
-brew install pyenv
-pyenv install 3.12.4
-pyenv local 3.12.4
-python --version
+conda create -n modcrisprUI python=3.12.4 -y
 ```
-## 3. Create a virtual environment called modscrisprOnline and activate the virtual environment
+## 3: Activate the modcrisprUI environment
 ```bash
-python -m venv modscrisprOnline
-source modscrisprOnline/bin/activate
+conda activate modcrisprUI
 ```
-## 4. After the environment is active, upgrade pip and install the packages
+## 4: Navigate to the 
 ```bash
-python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 ## 5. Download the NUPACK package (v4.0.2.0) from https://www.nupack.org/ and unzip it in your \Downloads folder
