@@ -33,7 +33,7 @@ cd ~/path/to/your/modcrispr
 ```bash
 pip install -r requirements.txt
 ```
-## Step 6: Download the most updated NUPACK package (currently Version 4.0.2.0) from https://www.nupack.org/, and unzip the folder in /Downloads
+## Step 6: Download the most updated NUPACK package (current Version 4.0.2.0) from https://www.nupack.org/, and unzip the folder in /Downloads
 ## Step 7: Install the NUPACK package
 ```bash
 python -m pip install -U nupack -f ~/Downloads/nupack-4.0.2.0/package
