@@ -132,6 +132,9 @@ Make sure the lengths of input guide and target sequences are consistent with th
 <img width="1994" height="624" alt="image" src="https://github.com/user-attachments/assets/15139f36-dc51-4fc1-a905-8a32fd2b1986" />
 
 ### Click on "Predict with custom fine-tuned model", the predicted activity will appear below
+
+## Bug Notice
+If you find
 <img width="1996" height="260" alt="image" src="https://github.com/user-attachments/assets/040bfdef-cb85-4d1c-86f6-a975d3dc0681" />
 
 ## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
