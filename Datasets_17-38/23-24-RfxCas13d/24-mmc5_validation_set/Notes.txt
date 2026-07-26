@@ -1,0 +1,2 @@
+The trained models in this folder are trained using CNN2 features where the target structure is extracted from the complete transcript structure.
+However, for SHAP-based feature analysis on single-stranded target structures, to make the results comparable with those obtsaied with Cas9 and Cas12a-based datasets, the CNN2 features there are exclusively derived from single-stranded RNA target, without consideration of being a part of the transcript.  
