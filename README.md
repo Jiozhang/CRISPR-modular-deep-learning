@@ -119,6 +119,7 @@ It should be noted that the first, second, and third columns must strictly corre
 <img width="1994" height="332" alt="image" src="https://github.com/user-attachments/assets/f7be3c16-9633-4b4d-96f3-3a35e7ef0dda" />
 
 ### Click on "Fine-tune custom model", it will show "Training in progress......", and the progress can be monitored in the terminal
+The fine-tuning process may take from minutes to hours depending on the dataset size and user-defined training parameters
 <img width="1992" height="146" alt="image" src="https://github.com/user-attachments/assets/857ab179-8625-4179-b1ce-27e563eaf8db" />
 
 ### After training is complete, the webpage will display a result summary
