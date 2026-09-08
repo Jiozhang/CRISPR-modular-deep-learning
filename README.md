@@ -1,6 +1,7 @@
 This branch stores the user-friendly webpage version of individually trained models and fine-tuned models
 
 # Installation guide
+The installation will take ~5 min on a regular desktop.
 
 ## 1. Open the ModularCRISPROnlineTool folder in Visual Studio Code 
 ## 2. Create a new virtual environment called modcrisprUI with Python 3.12.4
