@@ -1,0 +1,12 @@
+{
+  "tracr": "Chen2013",
+  "best_trial": 31,
+  "best_params": {
+    "num_leaves": 26,
+    "min_child_samples": 145
+  },
+  "best_iteration": 1293,
+  "validation_mse": 0.7297199787020581,
+  "unseen_pearson": 0.5070803213242193,
+  "unseen_spearman": 0.46898492929461905
+}

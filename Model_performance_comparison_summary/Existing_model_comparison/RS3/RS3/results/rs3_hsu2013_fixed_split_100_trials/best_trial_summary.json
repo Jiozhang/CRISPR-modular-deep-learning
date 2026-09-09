@@ -1,0 +1,12 @@
+{
+  "tracr": "Hsu2013",
+  "best_trial": 22,
+  "best_params": {
+    "num_leaves": 112,
+    "min_child_samples": 113
+  },
+  "best_iteration": 1804,
+  "validation_mse": 0.4444389299265702,
+  "unseen_pearson": 0.7444164828474007,
+  "unseen_spearman": 0.7314539229061335
+}
