@@ -1,0 +1,13 @@
+{
+  "editor_mode": "CBE_Efficiency",
+  "split_seed": 42,
+  "selected_seen_size": 4154,
+  "validation_fraction_within_seen": 0.2,
+  "n_total": 5193,
+  "n_train": 3323,
+  "n_validation": 831,
+  "n_unseen": 1039,
+  "train_sha256": "4f659b9a655db8a0ff1d933c119580b1103f1c7cef81b633f1e1c1f9cd37798b",
+  "validation_sha256": "36cd38e612b522a0a99e6121cd4a7d352776bdc6d8b49be930dee3a74873b22a",
+  "unseen_sha256": "85791ef7f4aba6ec8e6705661daf610ca2afa9ccd0e1e011a6db81d87bcf4664"
+}

@@ -1,0 +1,29 @@
+{
+  "activity_mode": "observed_lfc",
+  "activity_definition": "mean(lfc_r1, lfc_r2, lfc_r3)",
+  "sample_seed": 42,
+  "split_seed": 42,
+  "total_sampled": 10000,
+  "n_train": 6400,
+  "n_validation": 1600,
+  "n_unseen": 2000,
+  "official_context_5p": 3,
+  "official_context_3p": 0,
+  "allowed_guide_types": [
+    "DM",
+    "PM",
+    "RDM",
+    "RTM",
+    "SM",
+    "TM"
+  ],
+  "source_dataset_sha256": "9bed63be0ffda6772c3c77282596646d6fab907167dcd316ec27fe9aff1883e8",
+  "sampled_guide_sha256": "1d62a666e7f37af44ad7cc15f6a36eccd586363ac87f7695b5dd0a6f1c1e6f3a",
+  "sampled_target_sha256": "6a44774e0ef094fb0b16753ee95b46ae717131fca63dc037bfa647bdff15a310",
+  "sampled_5p_context_sha256": "54912f887b86b97e8fb16d20f966e2b1875b6d3267f4d388beb550bc561491e3",
+  "sampled_3p_context_sha256": "0d3bd19125c7572488e50076550be3963cf5ace26a332b7018aabe0dee8f47d8",
+  "sampled_activity_sha256": "1150402d8c0f9a253819d4ede3e64ba1c640e5a576fc2fa997256ed5b20d4929",
+  "train_sha256": "0d7d3b1eeeff9f00511f84e0f59a80e48fbb10a670b3237249aed601146a5880",
+  "validation_sha256": "dd3a34f62a4fc4b8e2d1f99212a6448de699146a3c86649bc668e1791ed740b3",
+  "unseen_sha256": "6455f326cf695509a534940e7cb7010d206714cb16c9984bfaae91d8ccde307e"
+}

@@ -1,0 +1,12 @@
+.idea/
+.git/
+.run/
+__pycache__
+data-processed/
+data-raw/
+essentiality/
+experiments/
+figures/
+hugging_face/
+predictions/
+predictions (other models)/

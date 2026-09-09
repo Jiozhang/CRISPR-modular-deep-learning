@@ -1,0 +1,10 @@
+.idea/
+.run/
+__pycache__
+/data-processed/junction*
+/data-processed/sea-bass.bz2
+/data-raw/
+/essentiality/
+/experiments/
+/figures/
+/predictions/

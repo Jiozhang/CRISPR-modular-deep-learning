@@ -1,0 +1,22 @@
+{
+  "selected_dataset": "LuoSpCas92020_min200",
+  "source_workbook": "/Users/zhangjiongyu/CRISPR-modular-deep-learning_backup_copy_revision/Revision_existing_model_comparison/CRISPRon/crispron/Luo2020_Kim2019.xlsx",
+  "source_sheet": "Luo2020_Kim2019",
+  "sequence_column": "30mer_gRNA",
+  "activity_source_column": "Indel_freq_HEK293T",
+  "training_activity_column": "Quant_norm_efficiency",
+  "activity_reconstruction": "Quant_norm_efficiency is copied from the workbook's final merged/rescaled Indel_freq_HEK293T column.",
+  "crisproff_source": "/Users/zhangjiongyu/CRISPR-modular-deep-learning_backup_copy_revision/Revision_existing_model_comparison/CRISPRon/crispron/results/crispron_LuoSpCas92020_min200_fixed_split/preprocessing/CRISPRoff_results.tsv",
+  "crisproff_column": "CRISPRoff_score",
+  "preprocessing_modified": false,
+  "dataset_filter": "LuoSpCas92020_min200",
+  "split_seed": 42,
+  "total_samples": 10543,
+  "expected_total_samples": 10543,
+  "n_train": 6747,
+  "n_validation": 1687,
+  "n_unseen": 2109,
+  "train_sha256": "1edbf274accddf4d3515ae486498e469d426c18b5ec9fb7cb897e35ee848ce75",
+  "validation_sha256": "ab43ee526a55bd0e98eae0613cf85a95f6e3150e10e6884bbcf83765776567d8",
+  "unseen_sha256": "7076834dc2dc4536092adc18113a10c6f7eb4388862a64e56bc0575f699fed46"
+}

@@ -1,0 +1,26 @@
+{
+  "architecture_source": "deepcas13.py",
+  "guides_containing_N_excluded_before_split": true,
+  "architecture_modified": false,
+  "preprocessing_modified": false,
+  "original_training_differences": [
+    "fixed train/validation/unseen split replaces 5-fold KFold ensemble",
+    "100 trials replace one fixed training configuration",
+    "validation set is used to select the reporting epoch"
+  ],
+  "authors_default_trial": {
+    "trial": 0,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "epochs": 30
+  },
+  "best_trial": 72,
+  "best_params": {
+    "learning_rate": 0.002396625682619818,
+    "batch_size": 64
+  },
+  "best_epoch": 25,
+  "validation_mse": 0.06970065087080002,
+  "unseen_pearson": 0.6473398958982337,
+  "unseen_spearman": 0.6287825047306531
+}

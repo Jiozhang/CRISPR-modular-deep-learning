@@ -1,0 +1,18 @@
+{
+  "best_trial": 74,
+  "best_params": {
+    "filters_k3": 88,
+    "filters_k5": 80,
+    "filters_k7": 72,
+    "dense_1": 112,
+    "dense_2": 64,
+    "dropout": 0.1151818781362012,
+    "learning_rate": 0.00010089190217550668,
+    "batch_size": 16,
+    "weight_decay": 0.0004444461072045442
+  },
+  "best_epoch": 55,
+  "validation_mse": 0.020168108865618706,
+  "unseen_pearson": 0.7833400964736938,
+  "unseen_spearman": 0.7726792180609877
+}

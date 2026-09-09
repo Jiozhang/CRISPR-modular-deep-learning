@@ -1,0 +1,18 @@
+{
+  "source_dataset": "Kim_2018_Train",
+  "source_file": "sgrna_modeler/sgrna_modeler/data/datasets/Kim_2018_Train.csv.zip",
+  "source_sha256": "42a86cc0e1dfc6cdddbda4f3cd6492e92516682b0ec0f78962a18bb6ddea4329",
+  "sequence_column": "Context Sequence",
+  "activity_column": "Indel frequency",
+  "context_length": 34,
+  "split_seed": 42,
+  "selected_seen_size": 12000,
+  "validation_fraction_within_seen": 0.2,
+  "n_total": 15000,
+  "n_train": 9600,
+  "n_validation": 2400,
+  "n_unseen": 3000,
+  "train_sha256": "af79f8792586956a634abe754ae870b3aaa8ba72e8ff9af19f66dd159285e56e",
+  "validation_sha256": "4e5c4a164e19878086bfdaa5a5bbf0919ceadeb1d74f90a1dd713faf00ba819e",
+  "unseen_sha256": "fb0aa4f7ce1a1c3e841a5ca35b4cffcc0c5f26ebb14bf90ed0f3f4b4879cfb5d"
+}

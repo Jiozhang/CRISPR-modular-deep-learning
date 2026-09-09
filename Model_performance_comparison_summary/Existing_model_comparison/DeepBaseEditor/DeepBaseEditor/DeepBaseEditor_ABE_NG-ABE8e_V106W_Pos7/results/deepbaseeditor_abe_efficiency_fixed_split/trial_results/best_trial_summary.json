@@ -1,0 +1,18 @@
+{
+  "editor_mode": "ABE_Efficiency",
+  "best_trial": 93,
+  "best_params": {
+    "conv_filters": 192,
+    "kernel_size": 3,
+    "dense_units": 112,
+    "dropout": 0.35209923899486084,
+    "chromatin_hidden": 48,
+    "learning_rate": 0.00021971491442407748,
+    "batch_size": 16,
+    "weight_decay": 0.00011461185153636969
+  },
+  "best_epoch": 39,
+  "validation_mse": 0.0016227774322032928,
+  "unseen_pearson": 0.6837624311447144,
+  "unseen_spearman": 0.7260677586323353
+}

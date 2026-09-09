@@ -1,0 +1,19 @@
+{
+  "model_mode": "Seq-deepCpf1",
+  "best_trial": 67,
+  "best_parameters": {
+    "conv_filters": 48,
+    "kernel_size": 7,
+    "dense_1": 80,
+    "dense_2": 96,
+    "dense_3": 80,
+    "dropout": 0.37270757853056125,
+    "learning_rate": 0.00016978537418469044,
+    "batch_size": 64,
+    "weight_decay": 0.0008908382164639385
+  },
+  "best_epoch": 88,
+  "validation_mse": 0.04390834201557912,
+  "unseen_pearson": 0.7619062882136126,
+  "unseen_spearman": 0.759186459514489
+}

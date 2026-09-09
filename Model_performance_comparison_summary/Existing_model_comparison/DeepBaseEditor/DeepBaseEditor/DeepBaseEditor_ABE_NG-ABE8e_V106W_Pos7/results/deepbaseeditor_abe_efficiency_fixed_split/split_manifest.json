@@ -1,0 +1,13 @@
+{
+  "editor_mode": "ABE_Efficiency",
+  "split_seed": 42,
+  "selected_seen_size": 4756,
+  "validation_fraction_within_seen": 0.2,
+  "n_total": 5946,
+  "n_train": 3804,
+  "n_validation": 952,
+  "n_unseen": 1190,
+  "train_sha256": "53ad0b399bcfc81e3aea8f2e6e6a82449b6792b3861d4f97f597eec9bb1d20f6",
+  "validation_sha256": "0b740cab7d8f5a8a7b759b632b50d2c52582cde92cb1d615d2a06481302130b3",
+  "unseen_sha256": "d701b7773bf17e325564fa7c4ad662a72a847e938c182318be09e2b5ce99ce4b"
+}

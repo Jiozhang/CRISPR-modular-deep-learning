@@ -1,0 +1,17 @@
+language: python
+python:
+- 3.7
+- 3.6
+
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: peterdeweirdt
+  password:
+    secure: R3a9Byu28NVEGm5BZvWeoEdy3iPjzo1WsgRhxbIexinYOXlSCIOL3DbszhlecUcrJOPW+W6O/7iVYwpCwDZ5uFPZBouB3XHo/YwqksVYauxvwjFXDsSfwLDNS8lkRZlCSP8J+5oYUVUp598z6IYioo7RFt5tmaCMfCCzBmcYF76p9+dRRWkMpPppzpBaD8FcgG8821kBAP3qFbYitb71uM2krr2SmSWronCD+7RCWfxf+gp7d270sBl90IcHG1U2sAGSUbthjuLQ1kU/RqSkDOmNk0j/Cb1MWvkmmJgyONhSvR7kbffbSpZ/9yEipvh3fI1zYuz1BMjeLSAcaxj6D1HKa/9yUdfdC4f6A6sIwQiVn4aW3mS6TX2wthvlDxdoqZpQv28uZzsNNzmBlA40ORK2Z/NAG9+2vjCbfexOMXAIVNi32OQXmvK2sYQxQ72qtJgr/VQtq5ZWWIwVRnGHX9TsLUfhDCFSiAXSEdAQyskx4UxrBBvdRsKyMF3ltLHaNE21XW/cJrReojDl/8GH/PJHAYt5Tj3k4ed7dMQpQcbKHEHH3DNQdLTpBYzKWj8+auPEaJWaqCzjuDDL/2fSrxuXLKRK1corW5p0oXTFcmnZrxs9VCq90XoONovQ+Hkn59LrdPdXu+HpOPE3PJLwWsqovjPfnqTpauOYd70tm6M=
+  on:
+    tags: true
+    repo: peterdeweirdt/sgrna_modeler
+    python: 3.6

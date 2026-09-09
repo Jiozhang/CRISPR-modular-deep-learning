@@ -1,0 +1,19 @@
+{
+  "editor_mode": "CBE_Efficiency",
+  "best_trial": 52,
+  "best_params": {
+    "conv_filters": 144,
+    "kernel_size": 7,
+    "dense_units": 160,
+    "dense_units_2": 80,
+    "dropout": 0.47047688857525505,
+    "chromatin_hidden": 48,
+    "learning_rate": 0.0018320361539007526,
+    "batch_size": 64,
+    "weight_decay": 0.0005512877731424675
+  },
+  "best_epoch": 22,
+  "validation_mse": 0.02033168077468872,
+  "unseen_pearson": 0.4300045967102051,
+  "unseen_spearman": 0.4048038561787678
+}

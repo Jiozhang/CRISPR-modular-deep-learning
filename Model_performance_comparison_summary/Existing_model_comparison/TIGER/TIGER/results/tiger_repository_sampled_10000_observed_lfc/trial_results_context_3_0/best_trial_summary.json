@@ -1,0 +1,25 @@
+{
+  "activity_mode": "observed_lfc",
+  "sampled_dataset_size": 10000,
+  "n_train": 6400,
+  "n_validation": 1600,
+  "n_unseen": 2000,
+  "context_5p": 3,
+  "context_3p": 0,
+  "best_trial": 80,
+  "best_params": {
+    "conv_filters": 64,
+    "kernel_width": 2,
+    "dense_1": 128,
+    "dense_2": 32,
+    "conv_dropout": 0.31233554667444124,
+    "dense_dropout_1": 0.11429183238486619,
+    "dense_dropout_2": 0.13515699185656557,
+    "learning_rate": 0.00029749553048118973,
+    "batch_size": 32
+  },
+  "best_epoch": 93,
+  "validation_mse": 0.2652361989021301,
+  "unseen_pearson": 0.712653636932373,
+  "unseen_spearman": 0.34680418408109764
+}

@@ -1,0 +1,14 @@
+data/
+figures/
+
+# venv
+cas12a_manuscript/
+sgrna_modeler.zip
+
+#RStudio settings
+Cas12a_manuscript.Rproj
+.Rhistory
+.Rproj.user
+
+# IDE settings
+.idea/
