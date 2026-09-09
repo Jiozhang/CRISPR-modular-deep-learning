@@ -1,0 +1,10 @@
+Feature,Q1,Q3,Median Spearman Correlation
+crRNA spacer,0.911,0.946,0.931
+bh_maximal consecutive paired bases,0.8,0.98,0.962
+bh_3' stem,0.451,0.641,0.594
+dsDNA target,0.721,0.966,0.951
+ah_maximal consecutive paired bases,0.696,0.957,0.886
+ah_5' stem,0.337,0.862,0.519
+ah_3' stem,0.177,0.825,0.382
+PAM-proximal region,0.154,0.859,0.654
+PAM-distal region,0.933,0.987,0.957
