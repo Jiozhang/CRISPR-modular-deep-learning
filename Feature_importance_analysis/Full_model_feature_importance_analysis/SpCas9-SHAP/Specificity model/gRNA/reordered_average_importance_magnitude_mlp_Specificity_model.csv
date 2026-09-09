@@ -1,0 +1,18 @@
+Feature,Average_Importance_Magnitude,Number_of_Models
+crRNA spacer,0.0057984807224045,10
+bh_maximal consecutive paired bases,0.0061105041622124,10
+bh_maximal consecutive unpaired bases,0.0063278678790801,10
+bh_5' overhang,0.007865905720841,10
+bh_3' overhang,0.0033407960669183,10
+bh_5' stem,0.0022288177465105,10
+bh_3' stem,0.0044984007279981,10
+dsDNA target,0.0430033699500044,10
+ah_maximal consecutive paired bases,0.0074678172758501,10
+ah_maximal consecutive unpaired bases,0.0041739708122722,10
+ah_5' overhang,0.0042912161077216,10
+ah_3' overhang,0.0024020337021595,10
+ah_5' stem,0.002900153870555,10
+ah_3' stem,0.0032058257753901,10
+PAM-proximal region,0.005237572097462,10
+central region,0.0078063648849827,10
+PAM-distal region,0.0083376186032357,10

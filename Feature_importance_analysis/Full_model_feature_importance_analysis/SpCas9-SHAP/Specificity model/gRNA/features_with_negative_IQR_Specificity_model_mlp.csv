@@ -1,0 +1,5 @@
+Feature,Q1,Q3,Median Spearman Correlation
+ah_maximal consecutive paired bases,-0.991,-0.981,-0.988
+PAM-proximal region,-0.987,-0.947,-0.973
+central region,-0.992,-0.985,-0.989
+PAM-distal region,-0.993,-0.987,-0.991
