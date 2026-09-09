@@ -1,0 +1,6 @@
+Feature,Q1,Q3,Median Spearman Correlation
+bh_5' stem,-0.79,-0.661,-0.749
+bh_3' stem,-0.678,-0.179,-0.643
+ah_maximal consecutive unpaired bases,-0.923,-0.436,-0.871
+ah_3' overhang,-0.536,-0.262,-0.508
+PAM-proximal region,-0.989,-0.899,-0.952
