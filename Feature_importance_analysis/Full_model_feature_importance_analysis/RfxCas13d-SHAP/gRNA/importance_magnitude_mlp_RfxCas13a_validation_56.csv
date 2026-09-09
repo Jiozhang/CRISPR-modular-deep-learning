@@ -1,0 +1,25 @@
+Feature,Importance Magnitude
+crRNA spacer,0.0173216861268946
+bh_5' overhang (crRNA),0.007795736498035687
+bh_maximal consecutive paired bases (crRNA),0.006495947281183264
+ah_3' stem (crRNA in duplex),0.005147604684125015
+ssRNA target,0.0036588414653284996
+central region,0.0033353049208438706
+crRNA-target duplex,0.003277973879954854
+bh_maximal consecutive unpaired bases (ssRNA),0.003010912959219409
+bh_5' stem (crRNA),0.002983610156815722
+bh_maximal consecutive unpaired bases (crRNA),0.0028979917641776495
+PFS-distal region,0.0027781899591347893
+PFS-proximal region,0.0027679290266451914
+ah_maximal consecutive paired bases (crRNA in duplex),0.0025706508683243996
+bh_3' stem (crRNA),0.0017719670958098704
+bh_5' overhang (ssRNA),0.0017559451876894819
+bh_3' stem (ssRNA),0.0013564919641584222
+bh_maximal consecutive paired bases (ssRNA),0.0013202093256286006
+bh_3' overhang (crRNA),0.0012522922375638413
+ah_5' stem (crRNA in duplex),0.000424612144314713
+bh_3' overhang (ssRNA),0.0003690500883193512
+bh_5' stem (ssRNA),0.00026348323358742817
+ah_maximal consecutive unpaired bases (crRNA in duplex),0.0
+ah_5' overhang (crRNA in duplex),0.0
+ah_3' overhang (crRNA in duplex),0.0

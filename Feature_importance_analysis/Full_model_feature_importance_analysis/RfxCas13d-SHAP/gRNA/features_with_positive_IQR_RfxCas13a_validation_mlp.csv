@@ -1,0 +1,9 @@
+Feature,Q1,Q3,Median Spearman Correlation
+crRNA spacer,0.985,0.989,0.987
+bh_maximal consecutive paired bases (crRNA),0.98,0.994,0.993
+bh_5' overhang (crRNA),0.706,0.858,0.852
+bh_5' stem (crRNA),0.817,0.864,0.861
+bh_3' stem (crRNA),0.505,0.732,0.732
+bh_maximal consecutive paired bases (ssRNA),0.895,0.973,0.966
+bh_3' overhang (ssRNA),0.176,0.801,0.715
+PFS-proximal region,0.416,0.986,0.924
