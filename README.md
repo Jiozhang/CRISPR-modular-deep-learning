@@ -69,7 +69,7 @@ git switch branchname
 jupyter notebook
 ```
 # Web UI version 
-We have also developed a user-friendly interface (UI) that enables direct, sample-to-answer prediction across a wide range of CRISPR reactions. Users can select from individually trained models or fine-tuned models for prediction, or alternatively train a customized fine-tuned model by uploading their own dataset.
+We have also developed a user-friendly interface (UI) that enables direct, sample-to-answer prediction across a wide range of CRISPR reactions. Users can select from individually trained models or fine-tuned models for prediction, or alternatively train a customized fine-tuned model by uploading their own dataset. Please switch to the "Online-tool-deploy" branch for the source code of this tool.
 
 <img width="1876" height="644" alt="image" src="https://github.com/user-attachments/assets/cab4d7e9-313b-4c88-acaf-afd9386ce66f" />
 
