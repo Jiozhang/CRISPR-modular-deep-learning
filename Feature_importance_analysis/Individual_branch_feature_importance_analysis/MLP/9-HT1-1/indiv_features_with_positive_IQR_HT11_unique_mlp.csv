@@ -1,0 +1,5 @@
+Feature,Q1,Q3,Median Spearman Correlation
+crRNA spacer,0.866,0.924,0.9
+bh_5' overhang,0.678,0.724,0.702
+bh_3' stem,0.733,0.735,0.734
+PAM-distal region,0.986,0.99,0.989

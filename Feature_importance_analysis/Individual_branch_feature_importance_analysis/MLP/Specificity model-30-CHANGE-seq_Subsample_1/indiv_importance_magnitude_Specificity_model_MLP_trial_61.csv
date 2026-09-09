@@ -1,0 +1,18 @@
+Feature,Importance Magnitude
+dsDNA target,0.10242399468326584
+bh_maximal consecutive unpaired bases,0.0402263170725293
+bh_3' overhang,0.029846150186900944
+bh_5' overhang,0.028953746650907223
+PAM-distal region,0.027843726281563997
+ah_maximal consecutive paired bases,0.02609324003591942
+central region,0.024804204926301136
+crRNA spacer,0.021841891718630903
+bh_maximal consecutive paired bases,0.019813460136371263
+ah_3' stem,0.018624801592798064
+PAM-proximal region,0.017574921493581728
+bh_3' stem,0.017353317503589434
+ah_5' overhang,0.013234407013309323
+ah_maximal consecutive unpaired bases,0.012820462486771447
+bh_5' stem,0.011858702637136145
+ah_3' overhang,0.009453855116025906
+ah_5' stem,0.008148942530865497

@@ -1,0 +1,12 @@
+Feature,Q1,Q3,Median Spearman Correlation
+crRNA spacer,-0.608,-0.286,-0.476
+bh_maximal consecutive unpaired bases,-0.811,-0.712,-0.766
+bh_5' overhang,-0.609,-0.544,-0.57
+bh_5' stem,-0.445,-0.344,-0.39
+ah_maximal consecutive paired bases,-0.925,-0.874,-0.9
+ah_maximal consecutive unpaired bases,-0.897,-0.855,-0.864
+ah_3' overhang,-0.675,-0.523,-0.627
+ah_5' stem,-0.551,-0.353,-0.438
+PAM-proximal region,-0.852,-0.811,-0.828
+central region,-0.926,-0.864,-0.89
+PAM-distal region,-0.964,-0.95,-0.956

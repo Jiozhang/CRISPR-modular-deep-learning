@@ -1,0 +1,6 @@
+Feature,Q1,Q3,Median Spearman Correlation
+bh_maximal consecutive paired bases,0.513,0.636,0.585
+bh_3' overhang,0.519,0.625,0.582
+bh_3' stem,0.697,0.755,0.738
+dsDNA target,0.989,0.991,0.99
+ah_3' stem,0.801,0.834,0.819

@@ -1,0 +1,6 @@
+Feature,Q1,Q3,Median Spearman Correlation
+bh_3' overhang (crRNA),-0.782,-0.684,-0.765
+ssRNA target,-0.868,-0.829,-0.846
+bh_5' overhang (ssRNA),-0.755,-0.717,-0.726
+central region,-0.388,-0.255,-0.273
+PFS-distal region,-0.587,-0.272,-0.488

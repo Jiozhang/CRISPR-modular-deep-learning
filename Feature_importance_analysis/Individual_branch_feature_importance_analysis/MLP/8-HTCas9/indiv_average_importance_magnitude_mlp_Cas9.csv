@@ -1,0 +1,18 @@
+Feature,Average_Importance_Magnitude,Number_of_Models
+PAM-proximal region,0.07479210968899697,10
+PAM-distal region,0.03511595843716359,10
+central region,0.023508592657697593,10
+crRNA spacer,0.02140387939883711,10
+bh_3' stem,0.01884062359060496,10
+ah_maximal consecutive paired bases,0.01825925127386235,10
+ah_5' stem,0.017609166185192798,10
+ah_3' stem,0.014743334368394001,10
+dsDNA target,0.01411584499405114,10
+bh_5' overhang,0.01223690602636482,10
+bh_maximal consecutive paired bases,0.00527656181683563,10
+bh_maximal consecutive unpaired bases,0.00508199489112995,10
+bh_3' overhang,0.00362621214576713,10
+bh_5' stem,0.0022771903508458,10
+ah_maximal consecutive unpaired bases,0.0,10
+ah_5' overhang,0.0,10
+ah_3' overhang,0.0,10

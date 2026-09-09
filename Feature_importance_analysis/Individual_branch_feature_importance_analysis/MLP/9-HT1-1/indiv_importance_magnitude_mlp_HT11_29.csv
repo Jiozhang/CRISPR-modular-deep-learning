@@ -1,0 +1,18 @@
+Feature,Importance Magnitude
+crRNA spacer,0.0362865720227135
+bh_maximal consecutive unpaired bases,0.03575551245890484
+bh_5' overhang,0.030829286943056033
+bh_maximal consecutive paired bases,0.019324396770071722
+bh_3' overhang,0.017442153885359295
+PAM-distal region,0.013983362140458823
+ah_5' stem,0.01383337057198518
+PAM-proximal region,0.010482603246603233
+central region,0.010271441266932385
+bh_3' stem,0.00923067184690133
+ah_maximal consecutive paired bases,0.008509132664406095
+ah_3' stem,0.0080604658290118
+dsDNA target,0.00618295186784842
+bh_5' stem,0.0024305744554095326
+ah_maximal consecutive unpaired bases,0.0
+ah_5' overhang,0.0
+ah_3' overhang,0.0

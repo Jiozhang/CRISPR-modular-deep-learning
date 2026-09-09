@@ -1,0 +1,9 @@
+Feature,Q1,Q3,Median Spearman Correlation
+bh_maximal consecutive paired bases,-0.987,-0.985,-0.986
+bh_maximal consecutive unpaired bases,-0.94,-0.906,-0.92
+bh_3' overhang,-0.201,-0.024,-0.176
+dsDNA target,-0.644,-0.296,-0.527
+ah_maximal consecutive paired bases,-0.745,-0.148,-0.472
+ah_5' stem,-0.897,-0.007,-0.325
+PAM-proximal region,-0.632,-0.477,-0.536
+central region,-0.503,-0.348,-0.446
