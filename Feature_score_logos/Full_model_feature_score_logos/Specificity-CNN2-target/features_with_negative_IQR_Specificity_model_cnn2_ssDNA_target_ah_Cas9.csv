@@ -1,0 +1,22 @@
+Feature,Q1,Q3,Median Spearman Correlation
+Pos1_Unpaired,-0.999,-0.827,-0.934
+Pos2_Unpaired,-0.689,-0.289,-0.389
+Pos4_Paired-Opening,-0.607,-0.071,-0.479
+Pos7_Unpaired,-0.239,-0.04,-0.148
+Pos7_Paired-Closing,-1.0,-0.417,-0.833
+Pos8_Unpaired,-0.54,-0.219,-0.465
+Pos9_Paired-Closing,-0.37,-0.087,-0.304
+Pos10_Paired-Opening,-0.442,-0.183,-0.438
+Pos10_Paired-Closing,-0.784,-0.257,-0.513
+Pos11_Paired-Opening,-0.391,-0.033,-0.242
+Pos11_Paired-Closing,-0.374,-0.088,-0.317
+Pos12_Paired-Opening,-0.318,-0.138,-0.256
+Pos12_Paired-Closing,-0.391,-0.158,-0.327
+Pos13_Paired-Opening,-0.243,-0.243,-0.243
+Pos13_Paired-Closing,-0.563,-0.284,-0.472
+Pos14_Paired-Opening,-0.173,-0.173,-0.173
+Pos14_Paired-Closing,-0.34,-0.1,-0.167
+Pos15_Unpaired,-0.612,-0.371,-0.524
+Pos16_Unpaired,-0.534,-0.172,-0.451
+Pos19_Unpaired,-0.412,-0.106,-0.152
+Pos20_Unpaired,-0.305,-0.1,-0.171
