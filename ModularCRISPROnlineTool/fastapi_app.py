@@ -50,34 +50,6 @@ def register_fine_tuned_shared_classes():
     __main__.GNNBranch = GNNBranch
     __main__.CNN_GNN_MLP_Fusion = CNN_GNN_MLP_Fusion
 
-def build_custom_model_from_trial(trial):
-    filters1       = trial.suggest_int("filters1", 32, 128, step=32)
-    kernel_size1   = trial.suggest_categorical("kernel_size1", [3, 5, 7])
-    dense_units1   = trial.suggest_int("dense_units1", 64, 256, step=64)
-
-    filters2       = trial.suggest_int("filters2", 32, 128, step=32)
-    kernel_size2   = trial.suggest_categorical("kernel_size2", [3, 5, 7])
-    dense_units2   = trial.suggest_int("dense_units2", 64, 256, step=64)
-
-    gnn_hidden_dim = trial.suggest_int("gnn_hidden_dim", 32, 128, step=32)
-    mlp_hidden_dim = trial.suggest_int("mlp_hidden_dim", 32, 128, step=32)
-    final_fc_dim   = trial.suggest_int("final_fc_dim", 64, 256, step=64)
-    dropout_rate   = trial.suggest_float("dropout_rate", 0.0, 0.5)
-
-    model = CNN_GNN_MLP_Fusion(
-        filters1=filters1,
-        kernel_size1=kernel_size1,
-        dense_units1=dense_units1,
-        filters2=filters2,
-        kernel_size2=kernel_size2,
-        dense_units2=dense_units2,
-        gnn_hidden_dim=gnn_hidden_dim,
-        mlp_hidden_dim=mlp_hidden_dim,
-        final_fc_dim=final_fc_dim,
-        dropout_rate=dropout_rate,
-    )
-    return model
-
 INDIVIDUAL_REACTION_CONFIGS: Dict[str, Dict[str, str]] = {
     "SpCas9_Kim_2019_SA": {
         "key": "SpCas9_Kim_2019_SA",
@@ -1338,11 +1310,40 @@ async def fine_tune_custom(request: Request):
 
         register_fine_tuned_shared_classes()
 
+        # Load the pretrained generalist model
+        if not os.path.isfile(GENERALIST_MODEL_PATH):
+            raise FileNotFoundError(
+                f"Pretrained generalist model not found: "
+                f"{GENERALIST_MODEL_PATH}"
+            )
+
+        best_teacher = torch.load(
+            GENERALIST_MODEL_PATH,
+            map_location="cpu",
+            weights_only=False
+        )
+
+        if not isinstance(best_teacher, nn.Module):
+            raise TypeError(
+                "The generalist checkpoint must contain "
+                "a complete PyTorch model."
+            )
+
+        best_teacher.eval()
+
+        print("Pretrained generalist model loaded successfully.")
+        print(f"Model path: {GENERALIST_MODEL_PATH}")
+
         model_path = os.path.join(work_dir, "fine_tuned_model.pt")
         best_trial_info = {}
 
         def objective(trial):
-            model = build_custom_model_from_trial(trial).to(DEVICE)
+            # Initialize each trial from the same pretrained model
+            model = copy.deepcopy(best_teacher).to(DEVICE)
+
+            # Enable full-model fine-tuning
+            for param in model.parameters():
+                param.requires_grad = True
 
             ft_lr = trial.suggest_float("ft_lr", 1e-6, 1e-4, log=True)
             ft_weight_decay = trial.suggest_float("ft_weight_decay", 1e-6, 1e-3, log=True)
