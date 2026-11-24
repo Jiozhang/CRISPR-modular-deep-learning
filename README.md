@@ -1,20 +1,20 @@
-This branch stores the user-friendly webpage version of individually trained models and fine-tuned models
+This branch hosts a user-friendly web interface for accessing individually trained and fine-tuned models that utilize thermodynamic features computed using NUPACK. 
 
 # Installation guide
 The installation will take ~5 min on a regular desktop.
 
-## 1. Open the ModularCRISPROnlineTool folder in Visual Studio Code 
-## 2. Create a new virtual environment called modcrisprUI with Python 3.12.4
+## 1. Open the ModularCRISPROnlineToolNUPACK folder in Visual Studio Code 
+## 2. Create a new virtual environment called modcrisprUINUPACK with Python 3.12.4
 ```bash
-conda create -n modcrisprUI python=3.12.4 -y
+conda create -n modcrisprUINUPACK python=3.12.4 -y
 ```
-## 3. Activate the modcrisprUI environment
+## 3. Activate the modcrisprUINUPACK environment
 ```bash
-conda activate modcrisprUI
+conda activate modcrisprUINUPACK
 ```
 ## 4. Navigate to the project directory
 ```bash
-cd ~/path/to/your/modcrisprUI
+cd ~/path/to/your/modcrisprUINUPACK
 ```
 ## 5. Install the project dependencies from requirements.txt
 ```bash
