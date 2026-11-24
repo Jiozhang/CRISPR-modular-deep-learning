@@ -22,6 +22,6 @@ pip install -r requirements.txt
 ```
 ## 6. Run the app
 ```bash
-/path/to/your/modcrisprUI/bin/python -m uvicorn fastapi_app:app --reload
+/path/to/your/modcrisprUIViennaRNA/bin/python -m uvicorn fastapi_app:app --reload
 ```
 ## 7. Go to http://127.0.0.1:8000 or any suggested address on your web browser and you should be ready to use the online version of this app
