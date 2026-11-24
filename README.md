@@ -69,7 +69,7 @@ git switch branchname
 jupyter notebook
 ```
 # Web UI version 
-We have also developed a user-friendly interface (UI) that enables direct, sample-to-answer prediction across a wide range of CRISPR reactions. In the NUPACK-based version, users can select from individually trained models or fine-tuned models for prediction, or alternatively train a customized fine-tuned model by uploading their own dataset. The ViennaRNA-based version currently supports customized model fine-tuning using user-provided datasets. Please switch to the "Online-tool-deploy-NUPACK" or "Online-tool-deploy-ViennaRNA" branch for the source code of this tool. Demonstrations of the NUPACK-based UI are provided below.
+We have also developed a user-friendly interface (UI) that enables direct, sample-to-answer prediction across a wide range of CRISPR reactions. In the NUPACK-based version, users can select from individually trained models or fine-tuned models for prediction, or alternatively train a customized fine-tuned model by uploading their own dataset. The ViennaRNA-based version currently supports customized model fine-tuning using user-provided datasets. Please switch to the `Online-tool-deploy-NUPACK` or `Online-tool-deploy-ViennaRNA` branch for the source code of this tool. Demonstrations of the NUPACK-based UI are provided below.
 
 <img width="1876" height="644" alt="image" src="https://github.com/user-attachments/assets/cab4d7e9-313b-4c88-acaf-afd9386ce66f" />
 
