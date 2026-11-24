@@ -137,7 +137,7 @@ Make sure the lengths of input guide and target sequences are consistent with th
 
 <img width="1996" height="260" alt="image" src="https://github.com/user-attachments/assets/040bfdef-cb85-4d1c-86f6-a975d3dc0681" />
 
-## The installation guide for this UI is detailed in the README.md of "Online-tool-deploy" branch
+## The installation guide for this UI is detailed in the README.md of `Online-tool-deploy-NUPACK` or `Online-tool-deploy-ViennaRNA` branch
 
 ## Bug Notice
 If you encounter **"AttributeError: Can't get attribute 'CNN_GNN_MLP_Fusion' on <module '__main__'>"** when executing **"Pytorch models-Single branches.ipynb"** files for loading the best single-branch models already existing in the folder, just simply **replace the class name "SINGLE_BRANCH_Only" (i.e., CNN1_Only, CNN2_Only, MLP_Only, GNN_Only) with "CNN_GNN_MLP_Fusion"**. The error happens because the original "best_SINGLE_BRANCH.pt" files were trained with class name unchanged.
